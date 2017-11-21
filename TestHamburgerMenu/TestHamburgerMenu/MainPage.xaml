@@ -5,9 +5,13 @@
              x:Class="TestHamburgerMenu.MainPage">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
+            <Label Text="Première page de l'application"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
+            <StackLayout BackgroundColor="White" Padding="60" VerticalOptions="Center">
+                <Button Text="Go to Second Page" BackgroundColor="BlueViolet" Clicked="NavigateButton_OnClicked">
+                </Button>
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

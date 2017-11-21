@@ -9,11 +9,18 @@ namespace TestHamburgerMenu
 {
     public partial class App : Application
     {
+        public NavigationPage NavigationPage { get; private set; } 
+ 
+ 
         public App()
         {
-            InitializeComponent();
+            var menuPage = new MenuPage();
+            NavigationPage = new NavigationPage(new MainPage());
+            var rootPage = new RootPage();
+            rootPage.Master = menuPage;
+            rootPage.Detail = NavigationPage;
+            MainPage = rootPage;
 
-            MainPage = new TestHamburgerMenu.MainPage();
         }
 
         protected override void OnStart()
